@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hannah Kim | GIS Portfolio</title>
+
+  <style>
+   :root{
+      --bg: #e8c4df;                     
+      --panel: rgba(255, 255, 255, 0.4); 
+    
+      --text: rgba(0, 0, 0, 0.835);
+     
+
+    
+ 
+  }
+
+
+    * { box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    header{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px 22px;
+      margin-bottom: 0;
+    }
+
+    h1{
+      margin: 0 0 6px;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tags{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tag{
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+    }
+
+
+    section h2{
+      font-size: 18px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      background: rgba(243, 236, 241, 0.06);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .card h3{
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p{
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+
+    .btn{
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    }
+
+    .btn:hover{
+      opacity: 0.9;
+    }
+
+    footer{
+      margin-top: 36px;
+      text-align: center;
+      color: var(--panel);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1>Hannah Kim</h1>
+      <p class="subtitle">
+        BSc Geomatics (Geography & Computer Science), University of Victoria — Expected Apr 2027
+      </p>
+
+      </div>
+    </header>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h3>GIS StoryMap Project</h3>
+        <p>
+          Designed and published an interactive GIS StoryMap integrating web maps,
+          narrative text, and visual elements to communicate spatial analysis to a
+          non-technical audience.
+        </p>
+        
+        <a class="btn" href="https://storymaps.arcgis.com/stories/98dd54fce47d43abaae9824208582f0d" target="_blank" rel="noopener">
+          View StoryMap
+        
+        </a>
+        <p>
+      Designed an interactive map that displays residential radon concentration levels across British Columbia.
+      The map allows users to explore spatial patterns and compare regional risk levels.
+       <p>
+
+        <a class="btn" href="https://uvgeog.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=6bd223814c2c4d4299e8192796ff6358" target="_blank" rel="noopener">
+          View Map
+
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Hannah Kim
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
